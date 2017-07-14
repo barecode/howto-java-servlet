@@ -1,6 +1,6 @@
-# How To: Java Cronjobs
+# How To: Java Servlets
 
-This "How To Guide" dives into Java EE servlets. With Servlet 3.1 you can forego much of the old deployment descriptor (web.xml) hacking, and simply use annotations. In fact, the is what a simple servlet looks like:
+This "How To Guide" dives into Java EE servlets. With Servlet 3.1 you can forego much of the old deployment descriptor (web.xml) hacking, and simply use annotations. In fact, this is what a simple servlet looks like:
 
 ```
 @WebServlet("/")
@@ -23,18 +23,18 @@ This guide presumes knowledge on install and use of the following:
 
 # Build and Deploy
 
-* Build the WAR
+* Step 1 - Build the WAR
   * Run `gradle` to build the WAR in `build/libs/howto-java-servlet.war`
-* Deploy to a the server
+* Step 2 - Deploy to a server
   * Required feature: `servlet-3.1`
+
 
 # Import into Eclipse
 
 The following are high-level instructions for importing this project into Eclipse
 
-1. Import -> Projects from Git
-2. Add `howto-java-servlet` to your Servers view
-3. You may need to modify your `.classpath` entry to point to your Liberty installation
+1. Run `gradle eclipse` to generate the .project and other files needed by Eclipse
+2. Import -> Projects from Git
 
 
 # Create a new Project
@@ -50,12 +50,9 @@ Within Eclipse for JEE Developers
     src/main/java/
     src/main/webapp/WEB-INF/
 ```
-4. Update Eclipse classpath
-- Project -> Properties -> Java Build Path -> Remove src -> Add src/main/webapp/
-New -> Servlet -> Package + Name -> Next -> Update URL Mapping to be "/" (if you want to do this) -> Next -> Update template if you want to -> Finish
+4. Update Eclipse source folder to be src/main/java
+Project -> Properties -> Java Build Path -> Remove src -> Add src/main/webapp/
+5. Create the Servlet
+New -> Servlet -> define Package + Name -> Next -> Update URL Mapping to be "/" (if you want to do this) -> Next -> Update template if you want to -> Finish
 Creates SimpleServlet.java AND updates the DD (Deployment Descriptor)
 
-# To Build
-
-run `gradle`
-Built war is at `build/libs/howto-java-servlet.war`
