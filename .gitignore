@@ -36,3 +36,9 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 /bin/
 /.apt_generated/
+
+# Ignore the generated Eclipse files
+.project
+.classpath
+.settings
+
