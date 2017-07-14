@@ -13,7 +13,7 @@ public class SimpleServlet extends HttpServlet {
 
 The [@WebServlet](http://docs.oracle.com/javaee/7/api/javax/servlet/annotation/WebServlet.html) annotation keeps things nice and tight.
 
-# Prerequisite
+## Prerequisite
 
 This guide presumes knowledge on install and use of the following:
 * Gradle
@@ -21,7 +21,7 @@ This guide presumes knowledge on install and use of the following:
 * WebSphere Developer Tools (WDT)
 
 
-# Build and Deploy
+## Build and Deploy
 
 * Step 1 - Build the WAR
   * Run `gradle` to build the WAR in `build/libs/howto-java-servlet.war`
@@ -29,7 +29,7 @@ This guide presumes knowledge on install and use of the following:
   * Required feature: `servlet-3.1`
 
 
-# Import into Eclipse
+## Import into Eclipse
 
 The following are high-level instructions for importing this project into Eclipse
 
@@ -37,7 +37,7 @@ The following are high-level instructions for importing this project into Eclips
 2. Import -> Projects from Git
 
 
-# Create a new Project
+## Create a new Project
 
 Within Eclipse for JEE Developers
 
